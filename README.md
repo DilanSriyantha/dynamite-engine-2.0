@@ -4,10 +4,9 @@ A **modular, event-driven 2D game engine** built in **C++ with SDL2**, designed 
 
 This engine powers **JungleQuest**, an infinite side-scrolling hack-and-slash game developed as part of a Bachelor of Computer Science project.
 
-<div>
-    <img src="https://i.ibb.co/Q3MD8jfv/ezgif-4a932540167e3587.gif" width="32%" />
-    <img src="https://i.ibb.co/JFtY6DGc/ezgif-27c8df05b9a61b60.gif" width="32%" />
-    <img src="https://i.ibb.co/7JPJBFtJ/2025-11-16-08-38-33-1-00-00-15-00-00-20.gif" width="32%" />
+<div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+    <img src="https://i.ibb.co/Q3MD8jfv/ezgif-4a932540167e3587.gif" width="35%" />
+    <img src="https://i.ibb.co/JFtY6DGc/ezgif-27c8df05b9a61b60.gif" width="35%" />
 </div>
 
 ---
