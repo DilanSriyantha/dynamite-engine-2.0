@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7c1d504f-966c-4e8a-868c-323c78369d0f}</ProjectGuid>
+    <RootNamespace>DynamiteEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExternalIncludePath>$(ProjectDir)Deps/SDL2/include;$(ProjectDir)Deps/SDL2_image/include;$(ProjectDir)Deps/SDL2_ttf/include;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExternalIncludePath>$(ProjectDir)Deps/SDL2/include;$(ProjectDir)Deps/SDL2_image/include;$(ProjectDir)Deps/SDL2_ttf/include;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Deps/SDL2/include;$(ProjectDir)Deps/SDL2_image/include;$(ProjectDir)Deps/SDL2_ttf/include;$(ProjectDir)Deps/SDL2_mixer/include;$(ProjectDir)src;$(ProjectDir)src/engine;$(ProjectDir)src/engine/ECS;$(ProjectDir)src/engine/Components;$(ProjectDir)src/engine/Interfaces;$(ProjectDir)src/engine/Types;$(ProjectDir)src/engine/Utils;$(ProjectDir)src/engine/Systems;$(ProjectDir)src/engine/UIElements;$(ProjectDir)Deps/libcurl-vc14-x86-release-dll-ipv6-sspi-schannel/include;$(ProjectDir)Deps/nlohmann_json_single_include;$(ProjectDir)Deps/nlohmann_json_single_include;$(ProjectDir)Deps/libcurl-vc14-x86-release-dll-ipv6-sspi-schannel/include;$(ProjectDir)src/engine/UIElements;$(ProjectDir)src/engine/Systems;$(ProjectDir)src/engine/Utils;$(ProjectDir)src/engine/Types;$(ProjectDir)src/engine/Interfaces;$(ProjectDir)src/engine/Components;$(ProjectDir)src/engine/ECS;$(ProjectDir)src/engine;$(ProjectDir)src;$(ProjectDir)Deps/SDL2_mixer/include;$(ProjectDir)Deps/SDL2_ttf/include;$(ProjectDir)Deps/SDL2_image/include;$(ProjectDir)Deps/SDL2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Deps/SDL2/lib/x86;$(ProjectDir)Deps/SDL2_image/lib/x86;$(ProjectDir)Deps/SDL2_ttf/lib/x86;$(ProjectDir)Deps/SDL2_mixer/lib/x86;$(ProjectDir)Deps/libcurl-vc14-x86-release-dll-ipv6-sspi-schannel/lib;$(ProjectDir)Deps/libcurl-vc14-x86-release-dll-ipv6-sspi-schannel/lib;$(ProjectDir)Deps/SDL2_mixer/lib/x86;$(ProjectDir)Deps/SDL2_ttf/lib/x86;$(ProjectDir)Deps/SDL2_image/lib/x86;$(ProjectDir)Deps/SDL2/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Deps/SDL2/include;$(ProjectDir)Deps/SDL2_image/include;$(ProjectDir)Deps/SDL2_ttf/include;$(ProjectDir)Deps/SDL2_mixer/include;$(ProjectDir)src;$(ProjectDir)src/engine;$(ProjectDir)src/engine/ECS;$(ProjectDir)src/engine/Components;$(ProjectDir)src/engine/Interfaces;$(ProjectDir)src/engine/Types;$(ProjectDir)src/engine/Utils;$(ProjectDir)src/engine/Systems;$(ProjectDir)src/engine/UIElements;$(ProjectDir)Deps/libcurl-vc14-x86-release-dll-ipv6-sspi-schannel/include;$(ProjectDir)Deps/nlohmann_json_single_include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Deps/SDL2/lib/x86;$(ProjectDir)Deps/SDL2_image/lib/x86;$(ProjectDir)Deps/SDL2_ttf/lib/x86;$(ProjectDir)Deps/SDL2_mixer/lib/x86;$(ProjectDir)Deps/libcurl-vc14-x86-release-dll-ipv6-sspi-schannel/lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\Components\BoxCollider.cpp" />
+    <ClCompile Include="src\engine\Components\Input.cpp" />
+    <ClCompile Include="src\engine\Components\RigidBody.cpp" />
+    <ClCompile Include="src\engine\ECS\AudioManager.cpp" />
+    <ClCompile Include="src\engine\Game.cpp" />
+    <ClCompile Include="src\engine\Components\Sprite.cpp" />
+    <ClCompile Include="src\engine\ECS\AssetManager.cpp" />
+    <ClCompile Include="src\engine\ECS\Entity.cpp" />
+    <ClCompile Include="src\engine\ECS\EntityManager.cpp" />
+    <ClCompile Include="src\engine\ECS\SceneManager.cpp" />
+    <ClCompile Include="src\engine\GameLoop.cpp" />
+    <ClCompile Include="src\engine\Systems\CollisionSystem.cpp" />
+    <ClCompile Include="src\engine\Systems\PhysicsSystem.cpp" />
+    <ClCompile Include="src\engine\Types\Vector2D.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\engine\Components\Transform.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\Components\BoxCollider.h" />
+    <ClInclude Include="src\engine\Components\Camera.h" />
+    <ClInclude Include="src\engine\Components\Components.h" />
+    <ClInclude Include="src\engine\Components\Input.h" />
+    <ClInclude Include="src\engine\Components\Parallax.h" />
+    <ClInclude Include="src\engine\Components\RigidBody.h" />
+    <ClInclude Include="src\engine\Components\Script.h" />
+    <ClInclude Include="src\engine\ECS\AudioManager.h" />
+    <ClInclude Include="src\engine\ECS\EventBus.h" />
+    <ClInclude Include="src\engine\ECS\HttpRequestManager.h" />
+    <ClInclude Include="src\engine\ECS\FileSystemManager.h" />
+    <ClInclude Include="src\engine\Game.h" />
+    <ClInclude Include="src\engine\Components\Sprite.h" />
+    <ClInclude Include="src\engine\ECS\SceneManager.h" />
+    <ClInclude Include="src\engine\ECS\TextureManager.h" />
+    <ClInclude Include="src\engine\GameLoop.h" />
+    <ClInclude Include="src\engine\Interfaces\ICanvas.h" />
+    <ClInclude Include="src\engine\Interfaces\ICompositeSceneObject.h" />
+    <ClInclude Include="src\engine\Interfaces\IPostionController.h" />
+    <ClInclude Include="src\engine\Interfaces\IScript.h" />
+    <ClInclude Include="src\engine\Interfaces\ISystem.h" />
+    <ClInclude Include="src\engine\Systems\CollisionSystem.h" />
+    <ClInclude Include="src\engine\Systems\PhysicsSystem.h" />
+    <ClInclude Include="src\engine\Types\Assets.h" />
+    <ClInclude Include="src\engine\Interfaces\IScene.h" />
+    <ClInclude Include="src\engine\Types\TransformData.h" />
+    <ClInclude Include="src\engine\ECS\AssetManager.h" />
+    <ClInclude Include="src\engine\Interfaces\IComponent.h" />
+    <ClInclude Include="src\engine\ECS\Entity.h" />
+    <ClInclude Include="src\engine\ECS\EntityManager.h" />
+    <ClInclude Include="src\engine\Types\Vector2D.h" />
+    <ClInclude Include="src\engine\UIElements\Button.h" />
+    <ClInclude Include="src\engine\UIElements\ImagePanel.h" />
+    <ClInclude Include="src\engine\UIElements\Panel.h" />
+    <ClInclude Include="src\engine\UIElements\Label.h" />
+    <ClInclude Include="src\engine\UIElements\TextInputBox.h" />
+    <ClInclude Include="src\engine\UIElements\UIElements.h" />
+    <ClInclude Include="src\engine\Utils\ColliderTags.h" />
+    <ClInclude Include="src\engine\Utils\ConfigTypes.h" />
+    <ClInclude Include="src\engine\Utils\EventTypes.h" />
+    <ClInclude Include="src\engine\Utils\FirebaseAuthManager.h" />
+    <ClInclude Include="src\engine\Utils\FirebaseFirestoreManager.h" />
+    <ClInclude Include="src\engine\Utils\Globals.h" />
+    <ClInclude Include="src\engine\ECS\HttpClient.h" />
+    <ClInclude Include="src\JungleQuest\Level1\Gameplay\Enemy.h" />
+    <ClInclude Include="src\JungleQuest\Level1\Gameplay\EnemySpawnSystem.h" />
+    <ClInclude Include="src\JungleQuest\Helpers\ScoreManager.h" />
+    <ClInclude Include="src\JungleQuest\Level1\Level1.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\EnemyHealthBar.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\GameOverPanel.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\HealthBar.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\HeartChallenge.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\HUD.h" />
+    <ClInclude Include="src\JungleQuest\Level1\Gameplay\ParallaxBackground.h" />
+    <ClInclude Include="src\JungleQuest\Level1\Gameplay\Player.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\LifelineIndicator.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\PauseMenu.h" />
+    <ClInclude Include="src\JungleQuest\Level1\UI\ScoreCounter.h" />
+    <ClInclude Include="src\JungleQuest\Menu\Gameplay\ScrollBackground.h" />
+    <ClInclude Include="src\JungleQuest\Menu\Menu.h" />
+    <ClInclude Include="src\engine\Interfaces\IGroupObserver.h" />
+    <ClInclude Include="src\engine\Components\Transform.h" />
+    <ClInclude Include="src\JungleQuest\Menu\UI\AboutPanel.h" />
+    <ClInclude Include="src\JungleQuest\Menu\UI\HighScorePanel.h" />
+    <ClInclude Include="src\exp_scene\Menu\UI\Leaderboard.h" />
+    <ClInclude Include="src\JungleQuest\Menu\UI\LoadingOverlay.h" />
+    <ClInclude Include="src\JungleQuest\Menu\UI\LoginPanel.h" />
+    <ClInclude Include="src\JungleQuest\Menu\UI\MenuOptions.h" />
+    <ClInclude Include="src\JungleQuest\Menu\UI\RegisterPanel.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
